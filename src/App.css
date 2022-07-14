@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+.post-list {
+    width: 450px;
+    margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.post {
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    background-color: hsl(235, 100%, 75%);
+    color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    list-style-type: none;
+    margin-bottom: 1rem;
+}
+.page {
+    border: 1.8px solid rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    padding: 0.3rem 0.8rem;
+    cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.prev-link,
+.next-link {
+    border: 1.8px solid rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    padding: 0.3rem 0.8rem;
+    cursor: pointer;
+    font-size: 1.15rem;
 }
 
-.App-link {
-  color: #61dafb;
+.activePage {
+    /* border-color: white; */
+    background-color: hsl(235, 100%, 75%);
+    border-color: hsl(235, 100%, 75%);
+    border-width: 2px;
+    font-weight: 600;
+    color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.page:hover,
+.next-link:hover,
+.prev-link:hover {
+    background-color: hsl(235, 60%, 95%);
+}
+
+.activePage:hover {
+    background-color: hsl(235, 100%, 75%);
+}
+
+.disabled-link {
+    opacity: 0.5;
+    cursor: default;
+}
+.disabled-link:hover {
+    background-color: white;
 }
